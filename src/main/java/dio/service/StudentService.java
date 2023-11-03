@@ -1,16 +1,21 @@
 package dio.service;
 
-import dio.model.Cliente;
+import dio.model.Student;
 
-public interface ClienteService {
+/**
+ * Interface que define o padrão <b>Strategy</b> no domínio de student. Com
+ * isso, se necessário, podemos ter multiplas implementações dessa mesma
+ * interface.
+ */
+public interface StudentService {
 
-    Iterable<Cliente> buscarTodos();
+    Iterable<Student> buscarTodos();
 
-    Cliente buscarPorId(Long id);
+    Student buscarPorId(Long id);
 
-    void inserir(Cliente cliente);
+    void inserir(Student cliente);
 
-    void atualizar(Long id, Cliente cliente);
+    void atualizar(Long id, Student cliente);
 
     void deletar(Long id);
 
